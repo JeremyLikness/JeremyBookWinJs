@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Jeremy Fun with WinJS</title>
+    <script type="text/javascript" src="Microsoft.WinJS.2.1/js/base.js"></script>
+    <script type="text/javascript" src="Microsoft.WinJS.2.1/js/ui.js"></script>
+    <script src="./app.js"></script>
+    <link rel="stylesheet" href="Microsoft.WinJS.2.1/css/ui-light.css"/>
+    <link rel="stylesheet" href="app.css"/>
+</head>
+<body>
+    <div id="bookTemplate" data-win-control="WinJS.Binding.Template" style="display: none">
+        <div class="book">
+            <img src="#" data-win-bind="src: img; alt: title"/>
+            <h4><a href="#" target="_blank" data-win-bind="href: link; textContent: title"></a></h4>
+        </div>
+    </div>
+    <div id="mainDiv" class="win-container">
+        <div class="win-type-xx-large">Jeremy's Books</div>
+        <div class="bookList" data-win-control="WinJS.UI.ListView"
+             data-win-options="{
+                itemDataSource: Book.ListView.data.dataSource,
+                itemTemplate: bookTemplate,
+                selectionMode: 'none',
+                tapBehavior: 'none',
+                swipeBehavior: 'none',
+                layout: { type: WinJS.UI.GridLayout }
+             }"></div>
+    </div>
+</body>
+</html>

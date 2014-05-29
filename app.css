@@ -1,0 +1,22 @@
+img {
+    margin: 5px;
+    padding: 5px;
+    width: 150px;
+    float: left;
+}
+
+h4 {
+    display: block;
+    height: 300px;
+}
+
+.book {
+    display: block;
+    height: 250px;
+    width: 300px;
+    vertical-align: middle;
+}
+
+.bookList {
+    height: 300px;
+}
